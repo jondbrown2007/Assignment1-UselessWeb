@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Your Password Cooked?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="view" id="check-view" aria-labelledby="page-title">
+      <h1 id="page-title">Is your password cooked?</h1>
+      <form id="password-form" novalidate>
+        <label class="visually-hidden" for="password-input">Password</label>
+        <div class="password-field">
+          <input
+            id="password-input"
+            name="password"
+            type="password"
+            placeholder="TYPE HERE"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+          <button
+            class="visibility-toggle"
+            id="visibility-toggle"
+            type="button"
+            aria-controls="password-input"
+            aria-label="Show password"
+          >Show</button>
+        </div>
+        <p class="message" id="form-message" aria-live="polite"></p>
+        <button class="button" id="check-button" type="submit">Check</button>
+      </form>
+    </section>
+
+    <section class="view" id="result-view" aria-labelledby="result-title" hidden>
+      <h1 id="result-title"></h1>
+      <p class="message result-message" id="result-message" aria-live="polite"></p>
+      <button class="button" id="back-button" type="button">Back</button>
+    </section>
+  </main>
+</body>
+</html>
